@@ -41,7 +41,8 @@ function handleFileSelect(evt) {
     
     for (i = 0; i < data.length; i++) {
       if (tableType == "Address") {
-        url1 = "https://gis.cityoftacoma.org/arcgis/rest/services/Locators/TacomaAddresses/GeocodeServer/findAddressCandidates?Address=";
+        //url1 = "https://gis.cityoftacoma.org/arcgis/rest/services/Locators/TacomaAddresses/GeocodeServer/findAddressCandidates?Address=";
+        url1 = "https://gis.cityoftacoma.org/arcgis/rest/services/Locators/Tacoma_Address_Geocoding_Service/GeocodeServer/findAddressCandidates?Address=";  //Changed 10/24/2019
         url2 = String(data[i].Address);
         url3 = "&outFields=&outSR=4326&f=pjson";
         url = url1.concat(url2, url3);
